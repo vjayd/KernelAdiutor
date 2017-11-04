@@ -66,6 +66,7 @@ import com.grarak.kerneladiutor.fragments.other.AboutFragment;
 import com.grarak.kerneladiutor.fragments.other.ContributorsFragment;
 import com.grarak.kerneladiutor.fragments.other.HelpFragment;
 import com.grarak.kerneladiutor.fragments.other.SettingsFragment;
+import com.grarak.kerneladiutor.modified.Cpustats;
 import com.grarak.kerneladiutor.fragments.statistics.DeviceFragment;
 import com.grarak.kerneladiutor.fragments.statistics.InputsFragment;
 import com.grarak.kerneladiutor.fragments.statistics.MemoryFragment;
@@ -172,7 +173,10 @@ public class NavigationActivity extends BaseActivity
 
     private void initFragments() {
         sFragments.add(new NavigationActivity.NavigationFragment(R.string.statistics));
+
         sFragments.add(new NavigationActivity.NavigationFragment(R.string.overall, new OverallFragment(), R.drawable.ic_chart));
+        sFragments.add(new NavigationActivity.NavigationFragment(R.string.MOnitor, new Cpustats(), R.drawable.ic_chart));
+
         sFragments.add(new NavigationActivity.NavigationFragment(R.string.device, new DeviceFragment(), R.drawable.ic_device));
         if (Device.MemInfo.getItems().size() > 0) {
             sFragments.add(new NavigationActivity.NavigationFragment(R.string.memory, new MemoryFragment(), R.drawable.ic_save));

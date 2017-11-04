@@ -60,6 +60,7 @@
                 android:resource="@xml/shortcuts" />
         </activity-alias>
 
+        <activity android:name=".modified.ActivityMain" />
         <activity android:name=".activities.MainActivity" />
         <activity android:name=".activities.NavigationActivity" />
         <activity android:name=".activities.TextActivity" />
@@ -138,6 +139,7 @@
             </intent-filter>
         </activity>
 
+        <service android:name=".modified.ServiceReader" />
         <receiver
             android:name=".services.profile.Tasker"
             android:process=":background">
